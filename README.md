@@ -1,5 +1,7 @@
 # Urban Dictionary API (Unofficial)
 
+![Pub Version](https://img.shields.io/pub/v/urbandictionary)
+
 This package provides basic API interface to Urban Dictionary. You can fetch specific definitions or
 get list of random word definitions.
 

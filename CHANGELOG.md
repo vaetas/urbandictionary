@@ -1,3 +1,7 @@
+## [0.1.2] - 2020-08-06
+
+* Update `pubspec.yaml` again.
+
 ## [0.1.1] - 2020-08-06
 
 * Update `pubspec.yaml`.

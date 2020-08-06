@@ -1,8 +1,7 @@
 name: urbandictionary
-version: 0.1.1
+version: 0.1.2
 description: Urban Dictionary API clients for accessing word definitions. Official and RapidAPI endpoints are supported.
-homepage: https://pub.dev/packages/urbandictionary
-repository: https://github.com/vaetas/urbandictionary
+homepage: https://github.com/vaetas/urbandictionary
 
 environment:
   sdk: '>=2.8.0 <3.0.0'
