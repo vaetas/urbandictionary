@@ -1,6 +1,7 @@
 name: urbandictionary
 version: 0.1.0
 description: Urban Dictionary API clients for accessing word definitions
+repository: https://github.com/vaetas/urbandictionary
 
 environment:
   sdk: '>=2.8.0 <3.0.0'
@@ -9,6 +10,7 @@ dependencies:
   pedantic: ^1.9.2
   dio: ^3.0.9
   json_annotation: ^3.0.1
+  meta: ^1.2.2
 
 dev_dependencies:
   build_runner: ^1.10.0
