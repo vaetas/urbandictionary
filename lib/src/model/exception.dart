@@ -3,5 +3,10 @@ class InvalidDataException implements Exception {
 }
 
 class InvalidResponseException implements Exception {
-  const InvalidResponseException();
+  final String message;
+
+  const InvalidResponseException([this.message]);
+
+  @override
+  String toString() => 'InvalidResponseException{message: $message}';
 }

@@ -10,18 +10,17 @@ export 'src/model/definition.dart';
 /// [InvalidDataException] (cannot parse data) and [InvalidResponseException]
 /// (server does not returns data).
 class UrbanDictionary {
-  final _dio = Dio();
+  final _dio = Dio(BaseOptions(responseType: ResponseType.json));
   final _url = 'http://api.urbandictionary.com/v0';
 
   /// Get definition for given [query].
-  Future<List<Definition>> fetchDefinition(String query) async {
+  Future<List<Definition>> define(String query) async {
     Response response;
 
     try {
       response = await _dio.get(
         '$_url/define',
         queryParameters: {'term': query},
-        options: RequestOptions(responseType: ResponseType.json),
       );
     } catch (e) {
       throw const InvalidResponseException();
@@ -36,13 +35,13 @@ class UrbanDictionary {
   }
 
   /// Get list of random word definitions.
-  Future<List<Definition>> fetchRandom() async {
+  Future<List<Definition>> random() async {
     Response response;
 
     try {
       response = await _dio.get('$_url/random');
     } catch (e) {
-      throw const InvalidResponseException();
+      throw InvalidResponseException(e);
     }
 
     try {

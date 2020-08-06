@@ -2,7 +2,8 @@ import 'package:urbandictionary/urbandictionary.dart';
 
 void main() {
   final client = UrbanDictionary();
-  client.fetchDefinition('egghead').then((value) {
+
+  client.define('egghead').then((value) {
     print(value.first);
   });
 
