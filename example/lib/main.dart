@@ -1,13 +1,19 @@
 import 'package:urbandictionary/urbandictionary.dart';
 
 void main() {
-  final client = UrbanDictionary();
+//  final client = UrbanDictionary(
+//    client: RapidApiUrbanDictionaryClient(
+//      key: 'YOUR_API_KEY',
+//    ),
+//  );
 
-  client.define('egghead').then((value) {
-    print(value.first);
+  final client = UrbanDictionary(client: OfficialUrbanDictionaryClient());
+
+  client.define('egghead').then((response) {
+    print(response.first);
   });
 
-//  client.fetchRandom().then((value) {
-//    print(value.length);
+//  client.random().then((response) {
+//    print(response);
 //  });
 }
